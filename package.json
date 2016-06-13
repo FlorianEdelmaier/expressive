@@ -1,0 +1,35 @@
+{
+  "name": "expressive",
+  "version": "0.0.1",
+  "description": "node express rest app builder cli",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava",
+    "build": "./node_modules/.bin/babel src -d lib"
+  },
+  "ava": {
+    "files": [
+      "test/**/*.js"
+    ],
+    "failFast": true,
+    "tap": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FlorianEdelmaier/expressive.git"
+  },
+  "keywords": [
+    "express",
+    "cli"
+  ],
+  "author": "Florian Edelmaier <florian.edelmaier@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FlorianEdelmaier/expressive/issues"
+  },
+  "homepage": "https://github.com/FlorianEdelmaier/expressive#readme",
+  "devDependencies": {
+    "ava": "0.15.2",
+    "babel-cli": "6.10.1"
+  }
+}
