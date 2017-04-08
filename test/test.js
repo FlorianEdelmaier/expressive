@@ -1,5 +1,3 @@
-import test from 'ava';
+import expect from 'expect';
 
-test("test the test", t => {
-    t.deepEqual([1,2],[1,2]);
-})
+
