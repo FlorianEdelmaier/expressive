@@ -5,9 +5,18 @@ const clear = require('clear');
 const figlet = require('figlet');
 const fs = require('fs');
 const inquirer = require('inquirer');
+const lounger = require('./src/lounger');
+
+args.option('version', 'get version of cli');
+
+const flags = args.parse(process.argv);
 
 clear();
 console.log(chalk.blue(figlet.textSync('Expressive', {horizontalLayout: 'full'})));
+
+lounger.load().then(() => {
+  if(flags.version) console.log(lounger.commands.version());
+});
 
 function getNextAction(callback) {
   var questions = [
@@ -28,4 +37,4 @@ function getNextAction(callback) {
   inquirer.prompt(questions).then(callback);
 }
 
-getNextAction(() => console.log(arguments));
+//getNextAction(() => console.log(arguments));

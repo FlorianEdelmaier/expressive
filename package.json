@@ -2,6 +2,7 @@
   "name": "expressive",
   "version": "0.0.1",
   "description": "node express rest app builder cli",
+  "preferGlobal": "true",
   "main": "index.js",
   "scripts": {
     "test": "mocha",
