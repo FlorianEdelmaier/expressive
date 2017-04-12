@@ -19,7 +19,6 @@ class Lounger {
         return new Promise((resolve, reject) => {
             fs.readdir(path.join(__dirname, 'api'), (err, files) => {
                 files.forEach((file) => {
-                    console.log("file", file);
                     if(!/\.js$/.test(file) || file === 'lounger.js') return;
                     const cmd = file.match(/(.*)\.js$/)[1];
                     const mod = require('./api/' + file);
